@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin: 10px 0 25px;
+    color: #222;
+}
+
+.lyrics-container {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.song-title {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.song-lyrics {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.song-lyrics .note {
+    color: #d6336c;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 6px;
+    background: #ffe5ec;
+}
+
+/* 🎹 Piano Style */
+.piano-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: fit-content;
+}
+
+.piano-key {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: bold;
+    user-select: none;
+    transition: all 0.2s ease;
+    border: 1px solid #444;
+}
+
+.white-key {
+    width: 70px;
+    height: 250px;
+    background: #fff;
+    margin: 0 2px;
+    border-radius: 0 0 8px 8px;
+    z-index: 1;
+}
+
+.black-key {
+    position: absolute;
+    width: 45px;
+    height: 150px;
+    background: #000;
+    color: #fff;
+    top: 0;
+    border-radius: 0 0 6px 6px;
+    z-index: 2;
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Key Press Animation */
+.piano-key:active {
+    transform: scaleY(0.97);
+    background: #f0f0f0;
+}
+
+.black-key:active {
+    background: #222;
+}
+
+.controls {
+    margin-top: 25px;
+}
+
+.note-display {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.volume-control {
+    margin: 10px 0;
+}
+
+.instructions {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #666;
+}
+
+/* Highlight pressed piano key */
+.piano-key.pressed {
+    background: #ffd6e0 !important;
+    transform: scaleY(0.96);
+}
+
+/* Highlight lyrics when note is played */
+.song-lyrics .note.active-note {
+    background: #ff4d6d;
+    color: white;
+    transition: 0.3s ease;
+}
